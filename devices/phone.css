@@ -1,0 +1,54 @@
+:root {
+  --phone-color: #444252;
+  --accent-color: #c7b0c3;
+}
+
+*{
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #eee;
+  background-image: linear-gradient(135deg, transparent, #eee 80%), linear-gradient(#ddd 1px, transparent 1px), linear-gradient(to right, #ddd 1px, transparent 1px);
+  background-size: 100% 100%, 74px 74px, 74px 74px;
+}
+
+#phone{
+  position: relative;
+  border: 7px solid var(--phone-color);
+  border-radius: 20px;
+  height: 600px;
+  width: 320px;
+  background-color: #f3f3f3;
+}
+
+#phone::before{
+  top: 100px;
+  left: -10px;
+  border-radius: 7px 0 0 7px;
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 50px;
+  background-color: var(--phone-color);
+}
+
+#phone::after{
+  top: 100px;
+  right: -10px;
+  border-radius: 0 7px 7px 0;
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100px;
+  background-color: var(--phone-color);
+}
