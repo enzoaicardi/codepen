@@ -1,6 +1,5 @@
 :root {
-  --phone-color: #444252;
-  --accent-color: #c7b0c3;
+  --device-color: #444252;
 }
 
 *{
@@ -22,33 +21,33 @@ body {
   background-size: 100% 100%, 74px 74px, 74px 74px;
 }
 
-#phone{
+#device{
   position: relative;
-  border: 7px solid var(--phone-color);
+  border: 7px solid var(--device-color);
   border-radius: 20px;
   height: 600px;
   width: 320px;
   background-color: #f3f3f3;
 }
 
-#phone::before{
-  top: 100px;
-  left: -10px;
-  border-radius: 7px 0 0 7px;
+#device::before,
+#device::after{
   content: '';
   position: absolute;
   width: 5px;
-  height: 50px;
-  background-color: var(--phone-color);
+  background-color: var(--device-color);
 }
 
-#phone::after{
+#device::before{
+  top: 100px;
+  left: -10px;
+  height: 50px;
+  border-radius: 7px 0 0 7px;
+}
+
+#device::after{
   top: 100px;
   right: -10px;
-  border-radius: 0 7px 7px 0;
-  content: '';
-  position: absolute;
-  width: 5px;
   height: 100px;
-  background-color: var(--phone-color);
+  border-radius: 0 7px 7px 0;
 }
