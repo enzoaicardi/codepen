@@ -139,7 +139,7 @@ textarea {
     transform: rotateZ(25deg) translateX(50%);
   }
   body:has(> .phone.hz)::before{
-    transform: rotateZ(65deg) translateX(50%);
+    transform: rotateZ(63deg) translateX(50%);
   }
 }
 
@@ -157,12 +157,12 @@ textarea {
 
 @supports selector(:has(*)) {
   body:has(> .tablet)::before{
-    height: 1050px;
+    height: 1040px;
     width: 640px;
-    transform: rotateZ(35deg) translateX(50%);
+    transform: rotateZ(37deg) translateX(50%);
   }
   body:has(> .tablet.hz)::before{
-    transform: rotateZ(55deg) translateX(50%);
+    transform: rotateZ(53deg) translateX(50%);
   }
 }
 
