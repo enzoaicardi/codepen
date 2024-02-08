@@ -1,9 +1,9 @@
 /* VARIABLES */
 
 :root {
-  --device-color: #444252;
-  --screen-color: #F3F3F3;
-  --shadow-color: rgba(0,0,0,0.3);
+  --color-device: #444252;
+  --color-screen: #F3F3F3;
+  --color-shadow: rgba(0,0,0,0.3);
   --icon-fill: 0;
   --icon-wght: 300;
   --icon-grad: 0;
@@ -17,6 +17,14 @@ body {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
+}
+
+@supports selector(:has(*)) {
+  body:has(> #device)::before{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to right, var(--color-shadow), transparent);
+  }
 }
 
 .material-symbols-outlined {
@@ -62,9 +70,9 @@ textarea {
 
 #device{
   position: relative;
-  border: 7px solid var(--device-color);
+  border: 7px solid var(--color-device);
   border-radius: 20px;
-  background-color: var(--screen-color);
+  background-color: var(--color-screen);
 }
 
 #device::before,
@@ -72,7 +80,7 @@ textarea {
   content: '';
   position: absolute;
   width: 5px;
-  background-color: var(--device-color);
+  background-color: var(--color-device);
 }
 
 #device.hz::before,
@@ -122,6 +130,17 @@ textarea {
   height: 320px;
 }
 
+@supports selector(:has(*)) {
+  body:has(> .phone)::before{
+    height: 660px;
+    width: 640px;
+    transform: rotateZ(25deg) translateX(50%);
+  }
+  body:has(> .phone.hz)::before{
+    transform: rotateZ(65deg) translateX(50%);
+  }
+}
+
 /* TABLET */
 
 .tablet{
@@ -134,6 +153,17 @@ textarea {
   height: 640px;
 }
 
+@supports selector(:has(*)) {
+  body:has(> .tablet)::before{
+    height: 1050px;
+    width: 640px;
+    transform: rotateZ(35deg) translateX(50%);
+  }
+  body:has(> .tablet.hz)::before{
+    transform: rotateZ(55deg) translateX(50%);
+  }
+}
+
 /* SURFACE */
 
 .surface{
@@ -144,4 +174,15 @@ textarea {
 .surface.hz{
   width: 1024px;
   height: 768px;
+}
+
+@supports selector(:has(*)) {
+  body:has(> .surface)::before{
+    height: 1260px;
+    width: 640px;
+    transform: rotateZ(37deg) translateX(50%);
+  }
+  body:has(> .surface.hz)::before{
+    transform: rotateZ(53deg) translateX(50%);
+  }
 }
