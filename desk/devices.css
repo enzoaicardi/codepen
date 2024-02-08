@@ -1,0 +1,57 @@
+:root {
+  --device-color: #444252;
+  --screen-color: #F3F3F3;
+  --background-color: #EEEEEE;
+  --gradient-color: #EEEEEE;
+  --pattern-color: #DDDDDD;
+}
+
+*{
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--background-color);
+  background-image: linear-gradient(135deg, transparent, var(--background-color) 80%), linear-gradient(var(--pattern-color) 1px, transparent 1px), linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
+  background-size: 100% 100%, 74px 74px, 74px 74px;
+}
+
+#device{
+  position: relative;
+  border: 7px solid var(--device-color);
+  border-radius: 20px;
+  height: 600px;
+  width: 320px;
+  background-color: var(--screen-color);
+}
+
+#device::before,
+#device::after{
+  content: '';
+  position: absolute;
+  width: 5px;
+  background-color: var(--device-color);
+}
+
+#device::before{
+  top: 100px;
+  left: -10px;
+  height: 50px;
+  border-radius: 7px 0 0 7px;
+}
+
+#device::after{
+  top: 100px;
+  right: -10px;
+  height: 100px;
+  border-radius: 0 7px 7px 0;
+}
