@@ -11,6 +11,14 @@
   font-family: "Poppins", Arial, sans-serif;
 }
 
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .material-symbols-outlined {
   font-variation-settings: "FILL" var(--icon-fill), "wght" var(--icon-wght), "GRAD" var(--icon-grad), "opsz" var(--icon-opsz);
 }
