@@ -17,12 +17,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.screen{
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   overflow: hidden;
 }
 
 @supports selector(:has(*)) {
-  body:has(> #device)::before{
+  body:has(> .device)::before,
+  .screen.shadow:has(> .device)::before{
     content: '';
     position: absolute;
     background-image: linear-gradient(to right, var(--color-shadow), transparent);
@@ -74,49 +84,49 @@ a{
 
 /* DEVICES */
 
-#device{
+.device{
   position: relative;
   border: 7px solid var(--color-device);
   border-radius: 20px;
   background-color: var(--color-screen);
 }
 
-#device::before,
-#device::after{
+.device::before,
+.device::after{
   content: '';
   position: absolute;
   width: 5px;
   background-color: var(--color-device);
 }
 
-#device.hz::before,
-#device.hz::after{
+.device.hz::before,
+.device.hz::after{
   width: initial;
   height: 5px;
 }
 
-#device::before{
+.device::before{
   top: 100px;
   left: -10px;
   height: 50px;
   border-radius: 7px 0 0 7px;
 }
 
-#device.hz::before{
+.device.hz::before{
   left: 100px;
   top: -10px;
   width: 50px;
   border-radius: 7px 7px 0 0;
 }
 
-#device::after{
+.device::after{
   top: 100px;
   right: -10px;
   height: 100px;
   border-radius: 0 7px 7px 0;
 }
 
-#device.hz::after{
+.device.hz::after{
   left: 100px;
   bottom: -10px;
   top: auto;
@@ -137,12 +147,14 @@ a{
 }
 
 @supports selector(:has(*)) {
-  body:has(> .phone)::before{
+  body:has(> .phone)::before,
+  .screen.shadow:has(> .phone)::before{
     height: 660px;
     width: 640px;
     transform: rotateZ(25deg) translateX(50%);
   }
-  body:has(> .phone.hz)::before{
+  body:has(> .phone.hz)::before,
+  .screen.shadow:has(> .phone.hz)::before{
     transform: rotateZ(63deg) translateX(50%);
   }
 }
@@ -160,12 +172,14 @@ a{
 }
 
 @supports selector(:has(*)) {
-  body:has(> .tablet)::before{
+  body:has(> .tablet)::before,
+  .screen.shadow:has(> .tablet)::before{
     height: 1040px;
     width: 640px;
     transform: rotateZ(37deg) translateX(50%);
   }
-  body:has(> .tablet.hz)::before{
+  body:has(> .tablet.hz)::before,
+  .screen.shadow:has(> .tablet.hz)::before{
     transform: rotateZ(53deg) translateX(50%);
   }
 }
@@ -183,12 +197,14 @@ a{
 }
 
 @supports selector(:has(*)) {
-  body:has(> .surface)::before{
+  body:has(> .surface)::before,
+  .screen.shadow:has(> .surface)::before{
     height: 1260px;
     width: 640px;
     transform: rotateZ(37deg) translateX(50%);
   }
-  body:has(> .surface.hz)::before{
+  body:has(> .surface.hz)::before,
+  .screen.shadow:has(> .surface.hz)::before{
     transform: rotateZ(53deg) translateX(50%);
   }
 }
