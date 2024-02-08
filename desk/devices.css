@@ -10,6 +10,7 @@
   --icon-opsz: 24;
   font-family: "Poppins", Arial, sans-serif;
   font-size: 1rem;
+  line-height: 1.15;
 }
 
 body {
