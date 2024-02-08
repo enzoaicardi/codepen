@@ -1,0 +1,13 @@
+:root{
+  --color-background: #EEEEEE;
+  --color-gradient: #EEEEEE;
+  --color-pattern: #DDDDDD;
+  --size-pattern: 74px;
+  --angle-gradient: 135deg;
+}
+
+body {
+  background-color: var(--color-background);
+  background-image: linear-gradient(var(--angle-gradient), transparent, var(--color-gradient) 80%), linear-gradient(to right, var(--color-pattern) 1px, transparent 1px);
+  background-size: 100% 100%, var(--size-pattern) var(--size-pattern);
+}
