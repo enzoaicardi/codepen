@@ -39,14 +39,14 @@ code,
 kbd,
 samp,
 pre {
-	font-family:
-		ui-monospace,
-		SFMono-Regular,
-		Consolas,
-		'Liberation Mono',
-		Menlo,
-		monospace;
-	font-size: 1rem;
+  font-family:
+	ui-monospace,
+	SFMono-Regular,
+	Consolas,
+	'Liberation Mono',
+	Menlo,
+	monospace;
+  font-size: 1rem;
 }
 
 button,
@@ -54,8 +54,8 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: inherit;
-	line-height: 1.15;
+  font-family: inherit;
+  line-height: 1.15;
 }
 
 /* DEVICES */
@@ -105,6 +105,7 @@ textarea {
 #device.hz::after{
   left: 100px;
   bottom: -10px;
+  top: auto;
   width: 100px;
   border-radius: 0 0 7px 7px;
 }
@@ -124,23 +125,23 @@ textarea {
 /* TABLET */
 
 .tablet{
-  height: 1024px;
-  width: 768px;
+  height: 800px;
+  width: 640px;
 }
 
 .tablet.hz{
-  width: 1024px;
-  height: 768px;
+  width: 800px;
+  height: 640px;
 }
 
 /* SURFACE */
 
 .surface{
-  height: 1368px;
-  width: 912px;
+  height: 1024px;
+  width: 768px;
 }
 
 .surface.hz{
-  width: 1368px;
-  height: 912px;
+  width: 1024px;
+  height: 768px;
 }
