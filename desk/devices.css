@@ -9,6 +9,7 @@
   --icon-grad: 0;
   --icon-opsz: 24;
   font-family: "Poppins", Arial, sans-serif;
+  font-size: 1rem;
 }
 
 body {
@@ -38,7 +39,6 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 1rem;
   text-decoration: none;
   border: none;
 }
@@ -64,6 +64,7 @@ select,
 textarea {
   font-family: inherit;
   line-height: 1.15;
+  font-size: 100%;
 }
 
 /* DEVICES */
