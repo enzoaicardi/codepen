@@ -3,7 +3,7 @@
 :root {
   --color-device: #444252;
   --color-screen: #F3F3F3;
-  --color-shadow: rgba(0,0,0,0.3);
+  --color-shadow: rgba(0,0,0,0.05);
   --icon-fill: 0;
   --icon-wght: 300;
   --icon-grad: 0;
