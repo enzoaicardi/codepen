@@ -1,8 +1,56 @@
+/* VARIABLES */
+
 :root {
   --device-color: #444252;
   --screen-color: #F3F3F3;
   --shadow-color: rgba(0,0,0,0.3);
+  --icon-fill: 0;
+  --icon-wght: 300;
+  --icon-grad: 0;
+  --icon-opsz: 24;
+  font-family: "Poppins", Arial, sans-serif;
 }
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" var(--icon-fill), "wght" var(--icon-wght), "GRAD" var(--icon-grad), "opsz" var(--icon-opsz);
+}
+
+/* RESETS */
+
+*{
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+}
+
+code,
+kbd,
+samp,
+pre {
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace;
+	font-size: 1rem;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	line-height: 1.15;
+}
+
+/* DEVICES */
 
 #device{
   position: relative;
