@@ -1,0 +1,46 @@
+:root{
+  --color-scrollbar-thumb: hsla(0, 0%, 100%, 0.4);
+  --color-scrollbar-thumb-hover: hsla(0, 0%, 100%, 0.6);
+  --color-scrollbar-thumb-active: hsla(0, 0%, 100%, 0.6);
+  --color-scrollbar-track: hsla(0, 0%, 0%, 0.2);
+  --size-scrollbar: 0.4rem;
+  --radius-scrollbar: 0.2rem;
+}
+
+/* CUSTOM SCROLLBAR */
+
+.cs::-webkit-scrollbar {
+  width: var(--size-scrollbar);
+  height: var(--size-scrollbar);
+}
+
+.cs::-webkit-scrollbar-thumb {
+  border-radius: var(--radius-scrollbar);
+  background: var(--color-scrollbar-thumb);
+}
+
+.cs::-webkit-scrollbar-thumb:hover {
+  border-radius: var(--radius-scrollbar);
+  background: var(--color-scrollbar-thumb-hover);
+}
+
+.cs::-webkit-scrollbar-thumb:active {
+  border-radius: var(--radius-scrollbar);
+  background: var(--color-scrollbar-thumb-active);
+}
+
+.cs::-webkit-scrollbar-track {
+  border-radius: var(--radius-scrollbar);
+  background: var(--color-scrollbar-track);
+}
+
+/* NO SCROLLBAR */
+
+.ns::-webkit-scrollbar {
+  display: none;
+}
+
+.ns {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
